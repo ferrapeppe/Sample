@@ -1,2 +1,2 @@
 # MCA-Sample
-Sample dataset for Music Curation and Analytics
+[Here is what I wrote about my dataset from the outset in Week 1.] My dataset is really cool. It includes a lot of different types of music. I have eclectic tastes in music, so I wanted to curate a dataset that reflects the diversity of my interests.  
