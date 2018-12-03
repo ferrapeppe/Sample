@@ -16,8 +16,7 @@
     <div id="content">
       <!-- ADD YOUR HTML CONTENT HERE! -->
       <h1>My project</h1>
-      <h2>Metadata</h2>
-      <p id="meta"></p>
+      <div id="meta"></div>
 
     </div>
 
@@ -40,7 +39,8 @@
           if (xhr.status === OK) {
             var parser = new DOMParser()
             var meiDoc = parser.parseFromString(xhr.responseText,"text/xml")
-            document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='m-8']").getAttribute('authURI') +"\">"
+            document.querySelector("#meta").innerHTML += "<h1>" + meiDoc.querySelector("[*|id='m-10']").textContent + "</h1>"
+            document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='m-8']").getAttribute('authURI') +"\"></h2>"
             document.querySelector("#meta").innerHTML += "<h2>" + meiDoc.querySelector("[*|id='m-8']").textContent + "</h2></a>"
             document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='m-8a']").getAttribute('authURI') +"\">"
             document.querySelector("#meta").innerHTML += "<h3>" + meiDoc.querySelector("[*|id='m-8a']").textContent +"</h3>"
