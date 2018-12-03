@@ -40,6 +40,7 @@
             var meiDoc = parser.parseFromString(xhr.responseText,"text/xml")
             document.querySelector("#meta").innerHTML += "<h1>" + meiDoc.querySelector("[*|id='m-10']").textContent + "</h1>"
             document.querySelector("#meta").innerHTML += "<p><strong>Composer:</strong> " + meiDoc.querySelector("[*|id='m-11']").textContent + "</p>"
+            document.querySelector("#meta").innerHTML += "<p><strong>Lyricist:</strong> " + meiDoc.querySelector("[*|id='m-13']").textContent + "</p>"
             /*document.querySelector("#meta").innerHTML += "<p><strong>Composer:</strong> <a href=\"" + meiDoc.querySelector("[*|id='m-8a']").getAttribute('authURI') +"\">"+ meiDoc.querySelector("[*|id='m-11']").textContent + "</a></p>"
             document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='m-8a']").getAttribute('authURI') +"\">"
             document.querySelector("#meta").innerHTML += "<h3>" + meiDoc.querySelector("[*|id='m-8a']").textContent +"</h3>"
