@@ -39,9 +39,8 @@
             var parser = new DOMParser()
             var meiDoc = parser.parseFromString(xhr.responseText,"text/xml")
             document.querySelector("#meta").innerHTML += "<h1>" + meiDoc.querySelector("[*|id='m-10']").textContent + "</h1>"
-            document.querySelector("#meta").innerHTML += "<p>Composer: <a href=\"" + meiDoc.querySelector("[*|id='m-8']").getAttribute('authURI') + "\">" meiDoc.querySelector("[*|id='m-11']").textContent + "</a></p>"
-            document.querySelector("#meta").innerHTML += "<h2>" + meiDoc.querySelector("[*|id='m-8']").textContent + "</h2></a>"
-            document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='m-8a']").getAttribute('authURI') +"\">"
+            document.querySelector("#meta").innerHTML += "<h2>" + meiDoc.querySelector("[*|id='m-11']").textContent + "</h2>"
+            /*document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='m-8a']").getAttribute('authURI') +"\">"
             document.querySelector("#meta").innerHTML += "<h3>" + meiDoc.querySelector("[*|id='m-8a']").textContent +"</h3>"
             document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='workcreator']").getAttribute('authURI') +"\">"
             document.querySelector("#meta").innerHTML += "<h3>composed by " + meiDoc.querySelector("[*|id='workcreator']").textContent +"</h3>"
@@ -55,7 +54,7 @@
             document.querySelector("#meta").innerHTML += "<li>" + meiDoc.querySelector("[*|id='perf2']").textContent + "</li>"
             document.querySelector("#meta").innerHTML += "<li>" + meiDoc.querySelector("[*|id='perf3']").textContent + "</li>"
             document.querySelector("#meta").innerHTML += "<li>" + meiDoc.querySelector("[*|id='perf4']").textContent + "</li></ul>"
-            document.querySelector("#meta").innerHTML += "<b>Language</b><ul><p><li>" + meiDoc.querySelector("[*|id='lang']").textContent + "</li></ul>"
+            document.querySelector("#meta").innerHTML += "<b>Language</b><ul><p><li>" + meiDoc.querySelector("[*|id='lang']").textContent + "</li></ul>"*/
           }
         }
       }
