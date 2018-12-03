@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>Schumann Song</title>
+    <title>My DHSI Music Encoding Project</title>
     <meta charset="utf-8">
     <meta name="description" content="My project">
     <meta name="author" content="Me">
@@ -15,20 +15,14 @@
 
     <div id="content">
       <!-- ADD YOUR HTML CONTENT HERE! -->
-      <h1>Schumann Song</h1>
-		<div align="right"><a href="index.html">Home</a></div>
+      <h1>My project</h1>
       <h2>Metadata</h2>
-		<p>Clara Schuman, &ldquo;Sie lieben sich beide&rdquo;, Op. 13, No. 2</p>
       <p id="meta"></p>
 
     </div>
 
     <!-- **** DO NO EDIT BELOW THIS LINE **** -->
     <!-- * **** **** **** **** **** **** **** -->
-    <div id="controls">
-      <button id="prev"> &lt; </button>
-      <button id="next"> &gt; </button>
-    </div>
     <div id="score">
       <!-- THIS IS WHERE THE SCORE GOES AUTOMATICALLY -->
     </div>
@@ -38,7 +32,6 @@
       var xhr = new XMLHttpRequest()
       xhr.open('GET', 'data/Sie_liebten.mei') // <-- change this to the right file
       xhr.send(null)
-
       /* Deal with the response */
       xhr.onreadystatechange = function () {
         var DONE = 4
@@ -47,14 +40,8 @@
           if (xhr.status === OK) {
             var parser = new DOMParser()
             var meiDoc = parser.parseFromString(xhr.responseText,"text/xml")
-            /* If your element has an authURI attribute, copy the folloiwng line, being sure to replace the "MY-XML-ID" with your element's actual xml:id.
-            document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='MY-XML-ID']").getAttribute('authURI') +"\"><p>" + meiDoc.querySelector("[*|id='MY-XML-ID']").textContent + "</p></a>"
-           */
-           /* If your element does not have an authURI attribute, copy the following line, being sure to replace the "MY-XML-ID" with your element's actual xml:id.
-            document.querySelector("#meta").innerHTML += "<p>" + meiDoc.querySelector("[*|id='m-8']").textContent + "</p>"
-            */
-	          document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='m-8']").getAttribute('authURI') +"\"></h2>"
-            /*document.querySelector("#meta").innerHTML += "<h2>" + meiDoc.querySelector("[*|id='m-8']").textContent + "</h2></a>"
+            document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='m-8']").getAttribute('authURI') +"\">"
+            document.querySelector("#meta").innerHTML += "<h2>" + meiDoc.querySelector("[*|id='m-8']").textContent + "</h2></a>"
             document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='m-8a']").getAttribute('authURI') +"\">"
             document.querySelector("#meta").innerHTML += "<h3>" + meiDoc.querySelector("[*|id='m-8a']").textContent +"</h3>"
             document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='workcreator']").getAttribute('authURI') +"\">"
@@ -69,7 +56,7 @@
             document.querySelector("#meta").innerHTML += "<li>" + meiDoc.querySelector("[*|id='perf2']").textContent + "</li>"
             document.querySelector("#meta").innerHTML += "<li>" + meiDoc.querySelector("[*|id='perf3']").textContent + "</li>"
             document.querySelector("#meta").innerHTML += "<li>" + meiDoc.querySelector("[*|id='perf4']").textContent + "</li></ul>"
-            document.querySelector("#meta").innerHTML += "<b>Language</b><ul><p><li>" + meiDoc.querySelector("[*|id='lang']").textContent + "</li></ul>"*/
+            document.querySelector("#meta").innerHTML += "<b>Language</b><ul><p><li>" + meiDoc.querySelector("[*|id='lang']").textContent + "</li></ul>"
           }
         }
       }
