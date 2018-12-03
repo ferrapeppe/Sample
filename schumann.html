@@ -53,8 +53,8 @@
            /* If your element does not have an authURI attribute, copy the following line, being sure to replace the "MY-XML-ID" with your element's actual xml:id.
             document.querySelector("#meta").innerHTML += "<p>" + meiDoc.querySelector("[*|id='m-8']").textContent + "</p>"
             */
-	    document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='m-8']").getAttribute('authURI') +"\">"
-            document.querySelector("#meta").innerHTML += "<h2>" + meiDoc.querySelector("[*|id='m-8']").textContent + "</h2></a>"
+	          document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='m-8']").getAttribute('authURI') +"\"></h2>"
+            /*document.querySelector("#meta").innerHTML += "<h2>" + meiDoc.querySelector("[*|id='m-8']").textContent + "</h2></a>"
             document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='m-8a']").getAttribute('authURI') +"\">"
             document.querySelector("#meta").innerHTML += "<h3>" + meiDoc.querySelector("[*|id='m-8a']").textContent +"</h3>"
             document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='workcreator']").getAttribute('authURI') +"\">"
